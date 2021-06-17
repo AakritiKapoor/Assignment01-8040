@@ -27,13 +27,16 @@ namespace Assignment01
 
         }
         public double SetLength(double length) {
+            this.length = length;
             return this.length;
         }
         public double GetWidth() {
             return width;
         }
         public double SetWidth(double width)
-        { return this.width;
+        {
+            this.width = width;
+            return this.width;
         }
         public double GetPerimeter() {
             return Math.Round((2 * (length + width)),2);
