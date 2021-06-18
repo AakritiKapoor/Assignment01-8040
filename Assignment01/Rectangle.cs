@@ -27,7 +27,16 @@ namespace Assignment01
 
         }
         public double SetLength(double length) {
-            this.length = length;
+            if (length < 1)
+            {
+                throw new ArgumentOutOfRangeException("Invalid dimension");
+                
+            }
+            else
+            {
+                this.length = length;
+            }
+
             return this.length;
         }
         public double GetWidth() {
@@ -35,13 +44,22 @@ namespace Assignment01
         }
         public double SetWidth(double width)
         {
-            this.width = width;
+            if (width < 1)
+            {
+                throw new ArgumentOutOfRangeException("Invalid dimension");
+            }
+            else
+            {
+                this.width = width;
+            }
+
             return this.width;
         }
         public double GetPerimeter() {
-            return Math.Round((2 * (length + width)),2);
+           return Math.Round(2*(length+width),2);
         }
-        public double GetArea() { return Math.Round(length * width,2); }
+        public double GetArea() { return Math.Round(length*width,2); }
 
     }
+   
 }

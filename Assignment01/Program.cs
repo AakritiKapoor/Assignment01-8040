@@ -91,7 +91,7 @@ namespace Assignment01
 
                 bool result = double.TryParse(userInput, out aNumber);
 
-                if (result == false)
+                if (result == false || aNumber<1)
                 {
                     Console.WriteLine("That's not a valid input please,  try again.\n");
                 }
