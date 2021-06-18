@@ -107,7 +107,7 @@ namespace Assignment01
         }
 
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Rectangle rectangleObj = new Rectangle();
           
