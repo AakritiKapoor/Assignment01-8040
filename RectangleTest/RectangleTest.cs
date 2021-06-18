@@ -13,7 +13,7 @@ namespace RectangleTest
     {
         Rectangle rec = new Rectangle();
 
-        [Test]
+        [Test(Description = "Set negative length")]
         public void Setting_negative_length()
         {
          //ARRANGE
@@ -25,7 +25,7 @@ namespace RectangleTest
             Assert.That(ex.Message.Contains("Invalid dimension"));
            
         }
-        [Test]
+        [Test(Description = "Set negative width")]
         public void Setting_negative_Width()
         {
             //ARRANGE
@@ -37,7 +37,7 @@ namespace RectangleTest
             Assert.That(ex.Message.Contains("Invalid dimension"));
 
         }
-        [Test]
+        [Test(Description = "Set length as zero")]
         public void Setting_zero_length()
         {
             //ARRANGE
@@ -49,7 +49,7 @@ namespace RectangleTest
             Assert.That(ex.Message.Contains("Invalid dimension"));
 
         }
-        [Test]
+        [Test(Description = "Set width as zero")]
         public void Setting_zero_width()
         {  //ARRANGE
             double l = 10, w =0;
@@ -59,7 +59,7 @@ namespace RectangleTest
             Assert.That(ex.Message.Contains("Invalid dimension"));
 
         }
-        [Test]
+        [Test(Description = "Set negitive length and width")]
         public void Setting_negative_length_and_width()
         {
             //ARRANGE
@@ -72,7 +72,7 @@ namespace RectangleTest
             Assert.That(ex2.Message.Contains("Invalid dimension"));
             
         }
-        [Test]
+        [Test(Description = "Get with when negative value sent as Setting_negative_length_and_width input")]
         public void Get_Neg_Width()
         {
             //ARRANGE
@@ -86,7 +86,7 @@ namespace RectangleTest
 
 
         }
-        [Test]
+        [Test(Description = "Calaculate perimeter with the whole number inputs")]
         public void CalculatePerimeter()
         {
             //ARRANGE
@@ -99,7 +99,7 @@ namespace RectangleTest
             Assert.AreEqual(50.6, result);
 
         }
-        [Test]
+        [Test(Description = "Calculate perimeter with deicmal inputs")]
         public void Calculate_perimeter_withDecimal()
         {
             //ARRANGE
@@ -112,7 +112,7 @@ namespace RectangleTest
             Assert.AreEqual(50.64, result);
 
         }
-        [Test]
+        [Test(Description = "Calculate area of rectangel with the whole numper inputs")]
         public void Area_with_whole_number_values()
         {
             //ARRANGE
@@ -126,7 +126,7 @@ namespace RectangleTest
         }
 
 
-        [Test]
+        [Test(Description = "Calculate area of rectange with the decimal inputs")]
         public void Area_decimal_value()
         {
             //ARRANGE
@@ -139,7 +139,7 @@ namespace RectangleTest
             Assert.AreEqual(270.72, result);
         }
 
-        [Test]
+        [Test(Description = "Check getWidth method withthe whole number as a input")]
         public void Get_width()
         {
             //ASSERT
@@ -151,7 +151,7 @@ namespace RectangleTest
             Assert.AreEqual(15.01,actualWidth);
 
         }
-        [Test]
+        [Test(Description = "Check the getLength Method with whole number ")]
         public void Get_length()
         {
             //ARRANGE
@@ -163,7 +163,7 @@ namespace RectangleTest
             Assert.AreEqual(22, actual_Length);
 
         }
-        [Test]
+        [Test(Description = "Check the getLength method against negitive length.")]
         public void Get_Neg_length()
         {
             //ARRANGE
