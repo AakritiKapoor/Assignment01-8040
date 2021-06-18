@@ -23,6 +23,15 @@ namespace RectangleTest
             double result = rec.GetPerimeter();
             Assert.AreEqual(result, 50);
         }
+        [Test]
+        public void area()
+        {
+            double l = 10, w = 15;
+            rec.SetLength(l);
+            rec.SetWidth(w);
 
+            double result = rec.GetPerimeter();
+            Assert.AreEqual(result, 50);
+        }
     }
 }
